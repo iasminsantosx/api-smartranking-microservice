@@ -9,6 +9,7 @@ async function bootstrap() {
     transport: Transport.RMQ,
     options: {
       urls: [process.env.RABBIT_URL],
+      noAck: false,
       queue: 'admin-backend',
     },
   });
